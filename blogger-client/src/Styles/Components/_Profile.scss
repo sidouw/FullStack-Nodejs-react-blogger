@@ -1,0 +1,125 @@
+.profile{
+    margin-top: 10rem;
+    color: $text-color;
+    // background: darkcyan;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid $bgcolor;
+    img{
+        border-radius: 50px;
+        border: 5px solid $bgcolor;
+        margin: 0;
+    }
+    h1{
+        margin: 1rem 0 0 0;
+    }
+    p{
+        margin: 1rem 0;
+    }
+    button{
+        padding: 10px;
+        border-radius: 5px;
+        border:  1px solid  $prcolor;
+        cursor: pointer;
+        color: $prcolor;
+        font-size: 1.5rem;
+        font-weight: 600;
+        max-width: 150px;
+        align-self: center;
+        margin-bottom: 1rem;
+    }
+
+}
+
+
+
+.profile-data{
+    color: $text-color;
+    margin-top: 2rem;
+    // background: firebrick;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    &__comments{
+        // background: yellow;
+        
+        margin-right: 2rem;
+        width: 100%;
+        border: 2px solid $bgcolor;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2{
+            margin: .5rem 0;
+        }
+    }
+    &__posts{
+        // background: darkkhaki;
+        
+        width: 100%;
+        border: 2px solid $bgcolor;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.profile-post{
+    
+    // background: magenta;
+    margin: 0rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: .5rem 2rem;
+    font-size: 2rem;
+    border-top: 1px solid $bgcolor;
+    
+    p{  
+        margin: .5rem 0;
+        margin-right: auto;
+        font-weight: 600;
+        // max: 300px;
+        word-wrap: break-word;
+        
+    }
+
+    span{
+        cursor: pointer;
+        margin-left: 1rem;
+        &:hover{
+            color: $prcolor;
+        }
+    }
+    a{
+        color: $text-color;
+        margin-left: 1rem;
+        &:hover{
+            color: $prcolor;
+        }
+    }
+    
+}
+
+@media screen and (max-width : 900px){
+    .profile-data{
+        flex-direction: column;
+    }
+    .profile-post{
+        font-size: 1.6rem;
+        padding: .5rem 1rem;
+
+        span{
+            margin-left: .5rem;
+        }
+        a{
+            margin-left: .5rem;
+        }
+    }
+}

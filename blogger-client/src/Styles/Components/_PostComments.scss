@@ -1,0 +1,52 @@
+.post-comments{
+    background: $white;
+    width: 100%;
+    // margin: 3rem ;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    &__comment{
+        // background: magenta;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        max-width: 90%;
+        border-bottom: 1px solid $text-color;
+        margin-bottom: 2rem;
+        &__author{
+            // background: lawngreen;
+
+            font-size: 2rem;
+                span{
+                    font-weight: 600;
+                }
+        }
+        &__date{
+            margin-left: 2rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        &__body{
+            margin-left: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        &__deletebtn{
+            position: absolute;
+            right: 0;
+            top: 0;
+            border: none;
+            background: $white;
+            font-weight: 800;
+            font-size: 2rem;
+            color: $prcolor;
+            cursor: pointer;
+            &:hover{
+                color: darken($prcolor, $amount: 10);
+            }
+        }
+
+    }
+
+
+}

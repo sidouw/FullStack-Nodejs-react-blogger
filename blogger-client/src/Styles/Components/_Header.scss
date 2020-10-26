@@ -1,0 +1,158 @@
+.header{
+    position: fixed;
+    z-index: 11;
+    top: 0;
+    background: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    width: 100%;
+    color: $prcolor;
+    &__title{
+        font-size: 3rem;
+        margin-left: 2rem;
+    }
+    &__links{
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        width: 30rem;
+        &__link{
+            color: $prcolor;
+            font-size:$font-size-large ;
+        }
+        &__link:hover{
+            color: $bgcolor;
+            border-bottom: 1px solid $prcolor;
+        }
+    }
+
+    &__btn{
+        border:  1px solid  $prcolor;
+        cursor: pointer;
+        color: $prcolor;
+        margin-right: 1rem;
+        padding: .3rem 1rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        border-radius: 5px;
+
+    }
+    &__profile-snipet{
+        height: 3rem;
+        display: flex;
+        
+        margin-right: 2rem;
+        &__btn{
+            border-radius: 5%;
+        padding: 0 .5rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+            img{
+                height: 3.5rem;
+                border-radius: 50%;
+            }
+        }
+        &__name{
+            margin-left: 1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: $prcolor;
+        }
+        &__btn:hover{
+            background: darken($white, $amount: 5);
+            border-bottom: 1px solid $prcolor;
+        }
+    }
+
+    &__menu{
+        margin: 0 0 0 2rem;
+        padding: 0;
+        display: none;
+        height: 3rem;
+        width: 3.5rem;
+        cursor: pointer;
+        &:hover{
+            height: 4rem;
+        }
+    }
+
+}
+
+.drop-down-menu{
+    position: absolute;
+    transition: ease 300ms right;
+    top: 4.8rem;
+    right :-100%;
+    background: $white ;
+    &__items{
+        margin: .5rem 5rem;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__item{
+        *{
+            color: $prcolor;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+        padding: 0 1rem;
+        border-bottom:  1px solid $prcolor;
+        margin: .5rem 0rem;
+    }
+
+    &.active{
+        right : 0
+    }
+}
+
+
+@media screen and (max-width : 900px){
+
+    .header{
+        &__links{
+            background: $white ;
+            position: absolute;
+            top: 2rem;
+            left :-100%;
+            height: 20rem;
+            width: 20rem;
+            padding: 0;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;;
+            transition: ease 300ms left;
+            &__link{
+                color: $prcolor;
+                font-size: 1.6rem;
+                font-weight: 600;
+                padding: .5rem 1rem;
+                border-bottom:  1px solid $prcolor;
+                margin: .5rem 0rem;
+            }
+
+            &.active{
+                left: 0
+            }
+
+        }
+        
+        &__profile-snipet{
+
+            &__name{
+                display: none;
+            }
+        }
+        
+        &__menu{
+            display: block;
+        }
+    }
+
+
+}

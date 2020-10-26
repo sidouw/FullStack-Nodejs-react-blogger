@@ -1,0 +1,38 @@
+.post-comment-form{
+    // background: magenta;
+    // margin-top: 1rem;
+    background: $white;
+    width: 100%;
+    border-radius: 5px;
+    // overflow: hidden;
+    &__form{
+        display: flex;
+        flex-direction: column;
+        h2{
+            margin: 1rem 0 1rem 2rem;
+            // margin-bottom: 1rem;
+
+        }
+        &__textarea{
+            margin: 0 3rem;
+            min-height: 15rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            font-size: 2rem;
+            border: 1px solid $text-color;
+        }
+        button{
+            padding: 10px;
+            border-radius: 5px;
+            border:  1px solid  $prcolor;
+            cursor: pointer;
+            color: $prcolor;
+            font-size: 1.5rem;
+            font-weight: 600;
+            max-width: 150px;
+            align-self: center;
+            margin-bottom: 1rem;
+        }
+    }
+
+}
